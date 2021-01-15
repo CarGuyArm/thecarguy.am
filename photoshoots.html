@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+<title>The Carguy </title>
+    <link rel="stylesheet" href="Slide.css">
+
+</head>
+<body  bgcolor="#0000">
+    <head>
+<li><a href="carguy.html"><img src="carguy.png" style="width:50px" "height:50px"></a></li>
+    <li><a href="photoshoots.html"><img src="photoshoots.png" style="width:110px"></a></li>
+   <li><a href="contact.html"><img src="contact.png" style="width:90px"></a></li>
+        
+    </head>
+    
+ <div class="slideshow-container">
+ 
+   <center><div class="mySlides fade">
+          
+           <img src="photos/drift.jpg" style="width:1000px" "height:900px" "margin:center"> 
+            <div class="text">Touge Drift</div>
+        </div>
+
+        <div class="mySlides fade">
+        
+            <img src="photos/DSC06032.jpg" style="width:1000px" "height:900px" >
+            <div class="text">EVN photoshoot</div>
+        </div>
+
+        <div class="mySlides fade">
+          
+            <img src="photos/DSC06135.jpg" style="width:1000px" "height:900px">
+            <div class="text" >EVN photoshoot</div>
+        </div>
+        <div class="mySlides fade">
+          
+            <img src="photos/DSC06431.jpg" style="width:1000px" "height:900px">
+            <div class="text">Drifting</div>
+
+        </div>
+       <div class="mySlides fade">
+          
+            <img src="photos/DSC06436.jpg" style="width:1000px" "height:900px">
+            <div class="text">Drifting</div>
+        </div>
+       <div class="mySlides fade">
+          
+            <img src="photos/DSC06448.jpg" style="width:1000px" "height:900px">
+            <div class="text">BMW 540</div>
+        </div>
+       <div class="mySlides fade">
+           <img src="photos/DSC06498.jpg" style="width:1000px" "height:900px">
+           <div class = "text">Trnumaara</div>
+       </div>
+       <div class="mySlides fade">
+          
+            <img src="photos/DSC06259.jpg" style="width:1000px" "height:900px">
+            <div class="text">2jz-gte power!</div>
+        </div>
+        <div class="mySlides fade">
+          
+            <img src="photos/DSC06322.jpg" style="width:1000px" "height:900px">
+            <div class="text">Zzz...</div>
+       </div>
+       
+
+       </center>
+<header>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a></header>
+
+    </div>
+    
+    
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+         
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+
+</body>
+</html>
